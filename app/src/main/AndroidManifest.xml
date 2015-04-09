@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nikhpand.dress_recommender" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="Gear Up" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DressDisplay"
+            android:label="@string/title_activity_dress_display" >
+        </activity>
+        <activity
+            android:name=".Trouser"
+            android:label="@string/title_activity_trouser_display" >
+        </activity>
+        <activity
+            android:name=".Shirt"
+            android:label="@string/title_activity_shirt" >
+        </activity>
+        <activity
+            android:name=".WeatherDisplay"
+            android:label="@string/title_activity_weather_display" >
+        </activity>
+        <activity
+            android:name=".UserSettingActivity"
+            android:label="Settings" >
+        </activity>
+        <activity
+            android:name=".DressDisplayFemale"
+            android:label="@string/title_activity_dress_display_female" >
+        </activity>
+        <activity
+            android:name=".TrouserF"
+            android:label="@string/title_activity_trouser_f" >
+        </activity>
+        <activity
+            android:name=".ShirtF"
+            android:label="@string/title_activity_shirt_f" >
+        </activity>
+        <activity
+            android:name=".Outer"
+            android:label="Outer Wear" >
+        </activity>
+        <activity
+            android:name=".Foot"
+            android:label="FootWear" >
+        </activity>
+        <activity
+            android:name=".Footf"
+            android:label="FootWear" >
+        </activity>
+        <activity
+            android:name=".OuterF"
+            android:label="OuterWear" >
+        </activity>
+        <activity
+            android:name=".Rain"
+            android:label="RainWear" >
+        </activity>
+
+
+
+
+        <activity
+            android:name=".VideoViewActivity"
+            android:label="@string/title_activity_vdeo_view" >
+        </activity>
+    </application>
+
+</manifest>
