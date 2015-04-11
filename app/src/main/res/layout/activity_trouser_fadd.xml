@@ -19,13 +19,13 @@
         android:gravity="center"
         />
 
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Clothes"
+        android:text="Save"
         android:id="@+id/button"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBottom="@+id/gridview"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="45dp" />
+        android:layout_marginBottom="37dp" />
+
 </RelativeLayout>

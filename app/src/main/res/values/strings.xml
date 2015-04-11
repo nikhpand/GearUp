@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Dress_Recommender</string>
 
+    <string name="app_name">Dress_Recommender</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="change_city">Change city</string>
@@ -9,30 +10,21 @@
     <string name="title_activity_trouser_display">Trouser</string>
     <string name="title_activity_shirt">Shirt</string>
     <string name="title_activity_weather_display">WeatherDisplay</string>
-
-
-
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
-
-
     <string name="pref_send_report">Send crash reports</string>
     <string name="pref_send_report_summary">Helps to fix bugs</string>
     <string name="pref_sync_frequency">Sync frequency</string>
     <string name="pref_sync_frequency_summary">Set the sync frequency</string>
     <string name="pref_user_name">Set username</string>
     <string name="pref_user_name_summary">Set your username</string>
-
     <string name="pref_user_profile">User Profile</string>
     <string name="pref_update_setting">Update Settings</string>
     <string name="title_activity_dress_display_female">DressDisplayFemale</string>
     <string name="title_activity_trouser_f">TrouserF</string>
     <string name="title_activity_shirt_f">ShirtF</string>
     <string name="title_activity_vdeo_view">VdeoViewActivity</string>
-
-
     <string name="button">Stream Video</string>
-
-
+    <string name="title_activity_trouser_fadd">TrouserFAdd</string>
 
 </resources>

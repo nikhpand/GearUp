@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -46,10 +47,15 @@ public class TrouserF extends ActionBarActivity {
     public static Map posToDressId;
 
 
+    static int index;
+
 
     Double temp ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        index=0;
+
         super.onCreate(savedInstanceState);
 
         Context context = getBaseContext();
@@ -97,21 +103,9 @@ public class TrouserF extends ActionBarActivity {
 
 
         Bundle extra = getIntent().getExtras();
-        //   temp = extra.getDouble("temp_key");
         //   Log.d("New_Activity_Temp", String.valueOf(temp));
         setContentView(R.layout.activity_trouser_f);
 
-//        GridView gridview = (GridView) findViewById(R.id.gridview);
-
-//        Thread thread = new Thread() {
-//
-//            public void run() {
-//                myplayer[0] = MediaPlayer.create(WeatherDisplay.this, R.raw.rain);
-//                myplayer[0].start();
-//            }
-//
-//        };
-//        thread.start();
 
         GridView gridview = (GridView) findViewById(R.id.gridview);
 //        gridview.setAdapter(new ImageAdapter_t(this));
@@ -192,7 +186,19 @@ public class TrouserF extends ActionBarActivity {
                 }
             }
         });
-    }
+
+        final Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                  Intent i;
+                i = new Intent(TrouserF.this , TrouserFAdd.class);
+                startActivity(i);
+            }
+        });
+ }
+
+
 
 
 
@@ -222,6 +228,9 @@ public class TrouserF extends ActionBarActivity {
 
 class ImageAdapter_ft extends BaseAdapter {
 
+
+
+  //  TrouserFAdd trouseraddobject = new TrouserFAdd();
     private final static String STORETEXT="Trouser_4f1.txt";
     String filePath ;
     FileOutputStream outputStream;
@@ -233,7 +242,10 @@ class ImageAdapter_ft extends BaseAdapter {
     }
 
     public int getCount() {
-        return mThumbIds.length;
+       // return TrouserAdd.femaleAddImages.length + mThumbIds.length;
+
+        return TrouserAdd.femaleAddImages.size() + mThumbIds.length;
+      //  return
     }
 
     public Object getItem(int position) {
@@ -256,8 +268,15 @@ class ImageAdapter_ft extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
+        if(position > 3)
+            {
+                int loc = TrouserAdd.femaleAddImages.get( TrouserF.index);
+                imageView.setImageResource(mThumbIdsfull[4+loc]);
+                TrouserF.index++;
+                return imageView;
+            }
         int pos = myNewPos(position);
-        imageView.setImageResource(mThumbIds[pos]);
+        imageView.setImageResource(mThumbIdsfull[pos]);
         TrouserF.posToDressId.put(position,mThumbIds[pos]);
         return imageView;
     }
@@ -266,6 +285,10 @@ class ImageAdapter_ft extends BaseAdapter {
     public static Integer[] mThumbIds = {
             R.drawable.womens_trouser_1, R.drawable.womens_trouser_2 , R.drawable.womens_trouser_3, R.drawable.womens_trouser_3 };
            /// R.drawable.dortmund, R.drawable.ball , R.drawable.bat, R.drawable.chelsea};
+
+    public static Integer[] mThumbIdsfull = {
+            R.drawable.womens_trouser_1, R.drawable.womens_trouser_2 , R.drawable.womens_trouser_3, R.drawable.womens_trouser_3  , R.drawable.fadd_1, R.drawable.f_add_2 , R.drawable.f_add_3, R.drawable.f_add_4};
+    /// R.drawable.dortmund, R.drawable.ball , R.drawable.bat, R.drawable.chelsea};
 
 
     public int myNewPos(int position)

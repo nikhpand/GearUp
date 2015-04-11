@@ -246,6 +246,11 @@ public class WeatherDisplay extends ActionBarActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 
 
 
