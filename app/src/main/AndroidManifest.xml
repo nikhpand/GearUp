@@ -22,19 +22,19 @@
         </activity>
         <activity
             android:name=".DressDisplay"
-            android:label="@string/title_activity_dress_display" >
+            android:label="Men's Collection" >
         </activity>
         <activity
             android:name=".Trouser"
-            android:label="@string/title_activity_trouser_display" >
+            android:label="Men's Trousers" >
         </activity>
         <activity
             android:name=".Shirt"
-            android:label="@string/title_activity_shirt" >
+            android:label="Men's Shirt" >
         </activity>
         <activity
             android:name=".WeatherDisplay"
-            android:label="@string/title_activity_weather_display" >
+            android:label="Weather" >
         </activity>
         <activity
             android:name=".UserSettingActivity"
@@ -42,35 +42,45 @@
         </activity>
         <activity
             android:name=".DressDisplayFemale"
-            android:label="@string/title_activity_dress_display_female" >
+            android:label="Women's Collection" >
         </activity>
         <activity
             android:name=".TrouserF"
-            android:label="@string/title_activity_trouser_f" >
+            android:label="Women's Trousers" >
         </activity>
         <activity
             android:name=".ShirtF"
-            android:label="@string/title_activity_shirt_f" >
+            android:label="Women's Shirt" >
         </activity>
         <activity
             android:name=".Outer"
-            android:label="Outer Wear" >
+            android:label="Men's Jacket" >
         </activity>
         <activity
             android:name=".Foot"
-            android:label="FootWear" >
+            android:label="Men's Footwear" >
         </activity>
         <activity
             android:name=".Footf"
-            android:label="FootWear" >
+            android:label="Women's Footwear" >
+        </activity>
+        <activity
+            android:name=".FormalDressDisplay"
+            android:label="Men's Formals" >
+        </activity>
+
+
+        <activity
+            android:name=".FormalDressDisplayFemale"
+            android:label="Women's Formals" >
         </activity>
         <activity
             android:name=".OuterF"
-            android:label="OuterWear" >
+            android:label="Women's Jacket" >
         </activity>
         <activity
             android:name=".Rain"
-            android:label="RainWear" >
+            android:label="" >
         </activity>
         <activity
             android:name=".VideoViewActivity"
@@ -78,7 +88,7 @@
         </activity>
         <activity
             android:name=".TrouserFAdd"
-            android:label="@string/title_activity_trouser_fadd" >
+            android:label="Women's Trousers" >
         </activity>
     </application>
 

@@ -105,7 +105,7 @@ public class Foot extends ActionBarActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Foot.this, "" + position, Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(Foot.this, "" + position, Toast.LENGTH_SHORT).show();
                 try {
 
 
@@ -171,28 +171,6 @@ public class Foot extends ActionBarActivity {
 
 
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_dress_display, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
 
 class ImageAdapter_fo extends BaseAdapter {
@@ -239,7 +217,7 @@ class ImageAdapter_fo extends BaseAdapter {
 
     // references to our images
     public static Integer[] mThumbIds = {
-            R.drawable.men_shoes_1, R.drawable.men_shoes_2 , R.drawable.men_shoes_2, R.drawable.men_shoes_4};
+            R.drawable.men_shoes_1, R.drawable.men_shoes_2 , R.drawable.ms1_1, R.drawable.ms4};
           //  R.drawable.dortmund, R.drawable.ball , R.drawable.bat, R.drawable.chelsea };
 
 

@@ -10,7 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.CheckBox;
 import android.widget.TextView;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class UserSettingActivity extends ActionBarActivity {
@@ -46,10 +50,48 @@ public class UserSettingActivity extends ActionBarActivity {
                     Sex = "SexUnknown";
                 }
 
+                CheckBox cbmon = (CheckBox)findViewById(R.id.mon);
+                CheckBox cbtue = (CheckBox)findViewById(R.id.tue);
+                CheckBox cbwed = (CheckBox)findViewById(R.id.wed);
+                CheckBox cbthu = (CheckBox)findViewById(R.id.thu);
+                CheckBox cbfri = (CheckBox)findViewById(R.id.fri);
+                CheckBox cbsat = (CheckBox)findViewById(R.id.sat);
+                CheckBox cbsun = (CheckBox)findViewById(R.id.sun);
+
+                boolean ismon = cbmon.isChecked();
+                boolean istue = cbtue.isChecked();
+                boolean iswed = cbwed.isChecked();
+                boolean isthu = cbthu.isChecked();
+                boolean isfri = cbfri.isChecked();
+                boolean issat = cbsat.isChecked();
+                boolean issun = cbsun.isChecked();
+
+                Set<String> workday = new HashSet<String>();
+
+                if(ismon)
+                    workday.add("Monday");
+                if(istue)
+                    workday.add("Tuesday");
+                if(iswed)
+                    workday.add("Wednesday");
+                if(isthu)
+                    workday.add("Thursday");
+                if(isfri)
+                    workday.add("Friday");
+                if(issat)
+                    workday.add("Saturday");
+                if(issun)
+                    workday.add("Sunday");
+
+
+
 //                String Sex = sex.getText().toString();
                 Log.d("DEbug", Sex);
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putString("gender", Sex);
+
+                editor.putStringSet("workingday", workday);
+
 
 
                 editor.commit();

@@ -45,7 +45,7 @@ public class TrouserFAdd extends ActionBarActivity {
 
                 TrouserAdd.femaleAddImages.add(position);
 
-                Toast.makeText(TrouserFAdd.this, "" + position, Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(TrouserFAdd.this, "" + position, Toast.LENGTH_SHORT).show();
 
                 }
         });
@@ -113,9 +113,16 @@ class ImageAdapter_ta extends BaseAdapter {
         return imageView;
     }
 
+
+
     // references to our images
+//    public static Integer[] mThumbIds = {
+//            R.drawable.fadd_1, R.drawable.f_add_2 , R.drawable.f_add_3, R.drawable.f_add_4};
+
     public static Integer[] mThumbIds = {
-            R.drawable.fadd_1, R.drawable.f_add_2 , R.drawable.f_add_3, R.drawable.f_add_4};
+             R.drawable.womens_trouser_3, R.drawable.ladiespannt4_1, R.drawable.womens_trouser_2, R.drawable.fadd};
+
+
 
     //  R.drawable.dortmund, R.drawable.ball , R.drawable.bat, R.drawable.chelsea };
 

@@ -105,7 +105,7 @@ public class Trouser extends ActionBarActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Trouser.this, "" + position, Toast.LENGTH_SHORT).show();
+            //    Toast.makeText(Trouser.this, "" + position, Toast.LENGTH_SHORT).show();
                 try {
 
 
@@ -169,30 +169,6 @@ public class Trouser extends ActionBarActivity {
         });
     }
 
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_dress_display, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
 
 class ImageAdapter_t extends BaseAdapter {
@@ -239,7 +215,7 @@ class ImageAdapter_t extends BaseAdapter {
 
     // references to our images
     public static Integer[] mThumbIds = {
-            R.drawable.men_trousers_1, R.drawable.men_trousers_2 , R.drawable.men_trousers_3, R.drawable.men_trousers_3};
+            R.drawable.men_trousers_3 , R.drawable.men_trousers_1, R.drawable.men_trousers_2 , R.drawable.mp4_1 , R.drawable.jeansm , R.drawable.jeansm2};
 
           //  R.drawable.dortmund, R.drawable.ball , R.drawable.bat, R.drawable.chelsea };
 

@@ -36,12 +36,41 @@ public class MainActivity extends ActionBarActivity  {
     String main;
     String main_desc;
     String icon;
+    String weatherCity;
+    String updatedCity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(
-                R.layout.activity_main);
+
+//        Intent intent = getIntent();
+//
+//        updatedCity = "Bryan";
+//
+//        Log.d("Debugging" ,"First part");
+//// Get the extras (if there are any)
+//        Bundle extras = intent.getExtras();
+//        if (extras != null) {
+//            updatedCity = extras.getString("city_key");
+//            Log.d("Debugging" ,updatedCity);
+//        }
+//        changeCity(updatedCity);
+
+        changeCity("Bryan");
+
+
+//
+//        Bundle extra = getIntent().getExtras();
+//        if(!extra.isEmpty())
+//        {
+//            updatedCity = extra.getString("city_key");
+//            if(updatedCity.isEmpty())
+//                changeCity("Bryan");
+//            else
+//                changeCity(updatedCity);
+//        }
+        setContentView(R.layout.activity_weather_display);
+      //  setContentView(R.layout.activity_main);
 
       //  showUserSettings();
 
@@ -60,38 +89,38 @@ public class MainActivity extends ActionBarActivity  {
     }
 
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-
-            case R.id.menu_settings:
-                Intent i = new Intent(this, UserSettingActivity.class);
-                startActivityForResult(i, RESULT_SETTINGS);
-                break;
-            case R.id.change_city:
-                showInputDialog();
-
-        }
-
-        return true;
-
-    }
-
-
-
-
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-       // Log.d("TAG" , I came on menu)
-
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+////    @Override
+////    public boolean onOptionsItemSelected(MenuItem item) {
+////
+////        switch (item.getItemId()) {
+////
+////            case R.id.menu_settings:
+////                Intent i = new Intent(this, UserSettingActivity.class);
+////                startActivityForResult(i, RESULT_SETTINGS);
+////                break;
+////            case R.id.change_city:
+////                showInputDialog();
+////
+////        }
+////
+////        return true;
+////
+////    }
+//
+//
+//
+//
+//
+//
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//       // Log.d("TAG" , I came on menu)
+//
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
 
     private void showInputDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -108,21 +137,11 @@ public class MainActivity extends ActionBarActivity  {
         builder.show();
     }
 
-    public void changeCity(String city){
-//        WeatherFragment wf = (WeatherFragment)getSupportFragmentManager()
-//                .findFragmentById(R.id.container);
-//        wf.changeCity(city);
-//        new CityPreference(this).setCity(city);
-//        wf.changeCity(mAddressOutput);
-//        new CityPreference(this).setCity(mAddressOutput);
+    public void changeCity(String city ){
 
-//                wf.changeCity("Bryan US");
-//        new CityPreference(this).setCity("Bryan US");
+        weatherCity= city;
       try {
           weatherparam = weatherreport.updateWeatherData(city, getApplicationContext());
-
-//          JSONWeatherTask task = new JSONWeatherTask();
-//          task.execute(new String[]{city});
 
       }catch(Exception e){
 
@@ -151,6 +170,7 @@ public class MainActivity extends ActionBarActivity  {
         i.putExtra("main_key",main);
         i.putExtra("maindesc_key" , main_desc);
         i.putExtra("icon_key" , icon);
+        i.putExtra("city_key" , weatherCity);
 
     //    Log.d("ICON", icon);
 

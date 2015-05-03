@@ -124,7 +124,7 @@ public class TrouserF extends ActionBarActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(TrouserF.this, "" + position, Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(TrouserF.this, "" + position, Toast.LENGTH_SHORT).show();
                 try {
 
 
@@ -193,36 +193,20 @@ public class TrouserF extends ActionBarActivity {
 
                   Intent i;
                 i = new Intent(TrouserF.this , TrouserFAdd.class);
+
                 startActivity(i);
             }
         });
  }
 
+    public void onBackPressed()
+    {
+        Intent i;
+        i = new Intent(TrouserF.this , DressDisplayFemale.class);
+        i.putExtra("temp_key" , 20);
+        i.putExtra("rain_key" ,1);
+        startActivity(i);
 
-
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_dress_display, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
 
@@ -282,12 +266,14 @@ class ImageAdapter_ft extends BaseAdapter {
     }
 
     // references to our images
-    public static Integer[] mThumbIds = {
-            R.drawable.womens_trouser_1, R.drawable.womens_trouser_2 , R.drawable.womens_trouser_3, R.drawable.womens_trouser_3 };
+//    public static Integer[] mThumbIds = {
+//            R.drawable.womens_trouser_1, R.drawable.womens_trouser_2 , R.drawable.womens_trouser_3, R.drawable.womens_trouser_3 };
+
+    public static Integer[] mThumbIds = {R.drawable.ladiespant2 , R.drawable.ladiespant1 , R.drawable.ladiespannt4_2 , R.drawable.jeansw1 };
            /// R.drawable.dortmund, R.drawable.ball , R.drawable.bat, R.drawable.chelsea};
 
     public static Integer[] mThumbIdsfull = {
-            R.drawable.womens_trouser_1, R.drawable.womens_trouser_2 , R.drawable.womens_trouser_3, R.drawable.womens_trouser_3  , R.drawable.fadd_1, R.drawable.f_add_2 , R.drawable.f_add_3, R.drawable.f_add_4};
+            R.drawable.ladiespant2 , R.drawable.ladiespant1 , R.drawable.ladiespannt4_2 , R.drawable.jeansw1 , R.drawable.womens_trouser_3, R.drawable.ladiespannt4_1, R.drawable.womens_trouser_2, R.drawable.fadd};
     /// R.drawable.dortmund, R.drawable.ball , R.drawable.bat, R.drawable.chelsea};
 
 

@@ -38,6 +38,7 @@ public class DressDisplayFemale extends ActionBarActivity {
     FileOutputStream outputStream;
     static int rain;
     static int wind;
+    String updatedCity;
 
 
     Double temp ;
@@ -89,6 +90,7 @@ public class DressDisplayFemale extends ActionBarActivity {
         temp = extra.getDouble("temp_key");
         rain = extra.getInt("rain_key");
         wind = extra.getInt("wind_key");
+        updatedCity = extra.getString("city_key");
         Log.d("New_Activity_Temp", String.valueOf(temp));
         setContentView(R.layout.activity_dress_display_female);
 //        ImageView imgView=(ImageView) findViewById(R.id.imgView);
@@ -137,7 +139,7 @@ public class DressDisplayFemale extends ActionBarActivity {
         gridview.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(DressDisplayFemale.this, "" + position, Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(DressDisplayFemale.this, "" + position, Toast.LENGTH_SHORT).show();
 
                 try {
 
@@ -176,23 +178,23 @@ public class DressDisplayFemale extends ActionBarActivity {
         });
     }
 
+    public void onBackPressed()
+    {
+        Intent i;
+//        MainActivity a = new MainActivity();
+//        a.changeCity("Shillong");
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+//        i = new Intent(DressDisplayFemale.this , MainActivity.class);
+//        Log.d("Debugging------>" ,updatedCity);
+//        i.putExtra("city_key",updatedCity);
+//        startActivity(i);
 
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        i = new Intent(DressDisplayFemale.this , MainActivity.class);
+        startActivity(i);
 
 
-        return super.onOptionsItemSelected(item);
     }
+
 }
 
 class ImageAdapterF extends BaseAdapter {
@@ -240,10 +242,12 @@ class ImageAdapterF extends BaseAdapter {
         imageView.setImageResource(mThumbIds[position]);
         return imageView;
     }
+//
+//    // references to our images
+//    private Integer[] mThumbIds = {
+//            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo };
 
-    // references to our images
-    private Integer[] mThumbIds = {
-            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo };
+    private Integer[] mThumbIds = {R.drawable.ladiespantmain , R.drawable.ladiesshirtmain , R.drawable.outer_wear , R.drawable.foot_logo };
 
 
     public int myNewPos(int position)
@@ -351,8 +355,10 @@ class ImageAdapterFr extends BaseAdapter {
     }
 
     // references to our images
-    private Integer[] mThumbIds = {
-            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo , R.drawable.umbrella};
+//    private Integer[] mThumbIds = {
+//            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo , R.drawable.umbrella};
+
+    private Integer[] mThumbIds = {R.drawable.ladiespantmain , R.drawable.ladiesshirtmain , R.drawable.outer_wear , R.drawable.foot_logo ,  R.drawable.umbrella};
 
     public int myNewPos(int position)
     {
@@ -458,8 +464,10 @@ class ImageAdapterFw extends BaseAdapter {
     }
 
     // references to our images
-    private Integer[] mThumbIds = {
-            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo };
+//    private Integer[] mThumbIds = {
+//            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo };
+
+    private Integer[] mThumbIds = {R.drawable.ladiespantmain , R.drawable.ladiesshirtmain , R.drawable.outer_wear , R.drawable.foot_logo};
 
 
     public int myNewPos(int position)
@@ -568,8 +576,10 @@ class ImageAdapterFrw extends BaseAdapter {
     }
 
     // references to our images
-    private Integer[] mThumbIds = {
-            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo};
+//    private Integer[] mThumbIds = {
+//            R.drawable.trouser_logo, R.drawable.shirt_logo , R.drawable.outer_wear, R.drawable.foot_logo};
+
+    private Integer[] mThumbIds = {R.drawable.ladiespantmain , R.drawable.ladiesshirtmain , R.drawable.outer_wear , R.drawable.foot_logo};
 
 
     public int myNewPos(int position)
